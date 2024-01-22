@@ -1,0 +1,32 @@
+-
+  const profile = {
+    name: "Evano",
+    role: "Project Manager",
+    picture: require("./assets/images/person.png"),
+  };
+
+  const links = [
+    { "icon": require("./assets/icons.svg#icon-key"), "path": "dashboard", "name": "Dashboard" },
+    { "icon": require("./assets/icons.svg#icon-d-square"), "path": "product", "name": "Product" },
+    { "icon": require("./assets/icons.svg#icon-user-square"), "path": "customers", "name": "Customers" },
+    { "icon": require("./assets/icons.svg#icon-wallet-money"), "path": "income", "name": "Income" },
+    { "icon": require("./assets/icons.svg#icon-discount-shape"), "path": "promote", "name": "Promote" },
+    { "icon": require("./assets/icons.svg#icon-message-question"), "path": "help", "name": "Help" }
+  ];
+
+  const customers = require("./data/customers.json");
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- Styles
+    link(rel="stylesheet", href=require("modern-normalize/modern-normalize.css"))
+    link(rel="stylesheet", href=require("./styles/index.scss"))
+    title CRM Dashboard
+  body
+    main
+      h2.title.title--size-medium Hello #{name} 👋🏼,
+      include includes/all-customers.pug
+      include includes/components/sidebar.pug

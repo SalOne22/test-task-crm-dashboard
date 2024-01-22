@@ -1,0 +1,21 @@
+@use "../variables/colors";
+
+.profile {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    margin-right: 0.75rem;
+
+    width: 2.625rem;
+    height: 2.625rem;
+
+    border-radius: 50%;
+  }
+
+  &__role {
+    font-size: 0.75rem;
+    letter-spacing: 0.12px;
+    color: colors.$gray-600;
+  }
+}

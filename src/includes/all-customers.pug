@@ -1,0 +1,27 @@
+section
+  div
+    div
+      h3 All Customers
+      p Active Members
+    form(action="", method="get")
+      input(type="text", name="search", placeholder="Search")
+  table
+    thead
+      tr
+        th Customer Name
+        th Company
+        th Phone Number
+        th Email
+        th Country
+        th Status
+    tbody
+      each customer in customers
+        tr
+          th #{customer.name}
+          th #{customer.company}
+          th #{customer.phone}
+          th #{customer.email}
+          th #{customer.country}
+          th
+            div #{customer.status}
+  include components/pagination.pug

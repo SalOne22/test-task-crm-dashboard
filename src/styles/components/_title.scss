@@ -1,0 +1,26 @@
+@use "../variables/colors";
+
+.title {
+  color: colors.$black;
+
+  &--size {
+    &-large {
+      font-size: 1.625rem;
+      font-weight: 600;
+      letter-spacing: 0.26px;
+      line-height: 1.5;
+    }
+
+    &-medium {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    &-small {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.14px;
+      line-height: 1.5;
+    }
+  }
+}

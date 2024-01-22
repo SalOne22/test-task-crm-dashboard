@@ -1,0 +1,23 @@
+@use "../variables/colors";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    color: colors.$black;
+    margin-right: 0.5rem;
+  }
+
+  &__text {
+    span {
+      margin-left: 0.25rem;
+
+      color: colors.$gray-500;
+
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+    }
+  }
+}

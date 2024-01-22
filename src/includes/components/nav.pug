@@ -1,0 +1,11 @@
+nav.navigation
+  ul.navigation__list
+    each link, index in links
+      li
+        a.navigation__link(href="/" + link.path)
+          svg.navigation__icon(width=24, height=24)
+            use(href=link.icon)
+          | #{link.name}
+          if index > 0
+            svg.navigation__chevron-icon(width=16, height=16)
+              use(href=require("../../assets/icons.svg#icon-chevron-right"))
