@@ -4,7 +4,6 @@
 
 .sidebar {
   position: fixed;
-  overflow-y: auto;
 
   width: 0;
   height: 100%;
@@ -33,6 +32,7 @@
 
   &__content {
     position: relative;
+    overflow-y: auto;
 
     width: sizes.$sidebar-width;
     height: 100%;
