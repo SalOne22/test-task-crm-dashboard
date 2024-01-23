@@ -4,28 +4,50 @@
 
 .sidebar {
   position: fixed;
-  overflow: auto;
+  overflow-y: auto;
 
   width: 0;
-  visibility: hidden;
+  height: 100%;
 
-  top: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
 
-  padding-top: 2.25rem;
-  padding-bottom: 4.75rem;
+  transition: background-color 500ms ease-in-out, width 0s linear 500ms;
 
-  background-color: colors.$white;
+  &[aria-expanded="true"] {
+    width: 100%;
 
-  @media screen and (min-width: breakpoints.$desktop) {
-    width: sizes.$sidebar-width;
-    visibility: visible;
+    background-color: rgba($color: colors.$black, $alpha: 0.5);
+    transition: background-color 500ms ease-in-out 1ms, width 0s linear;
+
+    .sidebar__content {
+      transform: translateX(0);
+    }
   }
 
-  &--open {
+  @media screen and (min-width: breakpoints.$desktop) {
+    background-color: transparent;
     width: sizes.$sidebar-width;
-    visibility: visible;
+    transition: none;
+  }
+
+  &__content {
+    position: relative;
+
+    width: sizes.$sidebar-width;
+    height: 100%;
+
+    padding-top: 2.25rem;
+    padding-bottom: 4.75rem;
+
+    background-color: colors.$white;
+
+    transform: translateX(-100%);
+    transition: transform 500ms ease-in-out;
+
+    @media screen and (min-width: breakpoints.$desktop) {
+      transform: translateX(0);
+    }
   }
 
   &__container {
@@ -39,6 +61,20 @@
 
     & > * + * {
       margin-top: 3.3125rem;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+
+    top: 1.5rem;
+    right: 1.5rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    @media screen and (min-width: breakpoints.$desktop) {
+      display: none;
     }
   }
 

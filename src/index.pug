@@ -3,7 +3,7 @@
   const profile = {
     name: "Evano",
     role: "Project Manager",
-    picture: require("./assets/images/person.png"),
+    picture: require("./assets/images/person.jpg"),
   };
 
   const links = [
@@ -27,9 +27,10 @@ html(lang="en")
     link(rel="stylesheet", href=require("./styles/index.scss"))
     title CRM Dashboard
   body
+    //- Somewhat component approach
     include includes/components/header.pug
     main
       .container
-        //- Somewhat component approach
         include includes/all-customers.pug
-        include includes/components/sidebar.pug
+    include includes/components/sidebar.pug
+    script(type="module", src=require("./js/mobile-menu.js")) 

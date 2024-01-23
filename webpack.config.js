@@ -2,6 +2,8 @@ const path = require("path");
 const PugPlugin = require("pug-plugin");
 
 module.exports = {
+  mode: "development",
+
   entry: {
     index: "./src/index.pug",
   },
