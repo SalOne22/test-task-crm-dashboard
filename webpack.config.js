@@ -1,5 +1,8 @@
 const path = require("path");
+const webpack = require("webpack");
 const PugPlugin = require("pug-plugin");
+
+const BASE_URL = process.env.BASE_URL || "/";
 
 module.exports = {
   mode: "development",
@@ -10,7 +13,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "dist/"),
-    publicPath: "/",
+    publicPath: BASE_URL,
   },
 
   resolve: {
@@ -28,6 +31,9 @@ module.exports = {
       css: {
         filename: "assets/css/[name].[contenthash:8].css",
       },
+    }),
+    new webpack.DefinePlugin({
+      "process.env.BASE_URL": BASE_URL,
     }),
   ],
 
