@@ -5,16 +5,17 @@
 @use "utils/fonts";
 @use "utils/reset";
 
+@use "components/container";
+@use "components/section";
 @use "components/all-customers";
 @use "components/badge";
-@use "components/container";
 @use "components/data-table";
+@use "components/header";
 @use "components/logo";
 @use "components/navigation";
 @use "components/pagination";
 @use "components/profile";
 @use "components/search";
-@use "components/section";
 @use "components/sidebar";
 @use "components/title";
 
@@ -24,11 +25,12 @@ body {
     sans-serif;
   background-color: colors.$bg;
   color: colors.$fg;
+
+  padding: 2.5625rem 0;
 }
 
 main {
   min-height: 100dvh;
-  padding: 2.5625rem 0;
 
   @media (min-width: breakpoints.$desktop) {
     margin-left: sizes.$sidebar-width;

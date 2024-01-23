@@ -1,11 +1,13 @@
 @use "../variables/sizes";
+@use "../variables/breakpoints";
 @use "../variables/colors";
 
 .sidebar {
   position: fixed;
   overflow: auto;
 
-  width: sizes.$sidebar-width;
+  width: 0;
+  visibility: hidden;
 
   top: 0;
   bottom: 0;
@@ -15,6 +17,16 @@
   padding-bottom: 4.75rem;
 
   background-color: colors.$white;
+
+  @media screen and (min-width: breakpoints.$desktop) {
+    width: sizes.$sidebar-width;
+    visibility: visible;
+  }
+
+  &--open {
+    width: sizes.$sidebar-width;
+    visibility: visible;
+  }
 
   &__container {
     display: flex;
@@ -26,7 +38,7 @@
     padding-right: 1.75rem;
 
     & > * + * {
-      margin-top: 4rem;
+      margin-top: 3.3125rem;
     }
   }
 

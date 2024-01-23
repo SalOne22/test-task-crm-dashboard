@@ -1,4 +1,11 @@
+@use "../variables/breakpoints";
+
 .container {
-  margin-left: 4.4375rem;
-  margin-right: 5.9375rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  @media screen and (min-width: breakpoints.$desktop) {
+    margin-left: 4.4375rem;
+    margin-right: 5.9375rem;
+  }
 }

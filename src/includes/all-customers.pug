@@ -11,11 +11,12 @@ section.section.all-customers
     table.data-table
       thead
         tr
-          th Customer Name
-          th Company
-          th Phone Number
-          th Email
-          th Country
+          //- This sizes should calculate automatically
+          th(style="width:21.7%") Customer Name
+          th(style="width:13.5%") Company
+          th(style="width:16.1%") Phone Number
+          th(style="width:21.4%") Email
+          th(style="width:14.5%") Country
           th Status
       tbody
         each customer in customers

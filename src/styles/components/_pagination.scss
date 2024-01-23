@@ -1,9 +1,15 @@
 @use "../variables/colors";
+@use "../variables/breakpoints";
 
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: breakpoints.$tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__text {
     font-size: 0.875rem;
@@ -12,6 +18,12 @@
     line-height: 1.5;
 
     color: colors.$gray-200;
+
+    margin-top: 0.75rem;
+
+    @media screen and (min-width: breakpoints.$tablet) {
+      margin-top: 0;
+    }
   }
 
   &__buttons {
@@ -27,7 +39,7 @@
   }
 
   &__text {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.12px;

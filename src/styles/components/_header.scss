@@ -1,0 +1,24 @@
+@use "../variables/breakpoints";
+@use "../variables/sizes";
+@use "../variables/colors";
+
+.header {
+  @media (min-width: breakpoints.$desktop) {
+    margin-left: sizes.$sidebar-width;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    color: colors.$black;
+
+    @media (min-width: breakpoints.$desktop) {
+      display: none;
+    }
+  }
+}
