@@ -5,11 +5,18 @@
 @use "utils/fonts";
 @use "utils/reset";
 
-@use "components/title";
+@use "components/all-customers";
+@use "components/badge";
+@use "components/container";
+@use "components/data-table";
 @use "components/logo";
-@use "components/sidebar";
 @use "components/navigation";
+@use "components/pagination";
 @use "components/profile";
+@use "components/search";
+@use "components/section";
+@use "components/sidebar";
+@use "components/title";
 
 body {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
@@ -20,9 +27,10 @@ body {
 }
 
 main {
-  height: 100dvh;
+  min-height: 100dvh;
+  padding: 2.5625rem 0;
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: breakpoints.$desktop) {
     margin-left: sizes.$sidebar-width;
   }
 }

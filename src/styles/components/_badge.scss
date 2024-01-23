@@ -1,0 +1,31 @@
+@use "../variables/colors";
+
+.badge {
+  padding: 0.25rem 0.75rem;
+
+  width: 5rem;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  border: 1px solid colors.$black;
+  border-radius: 0.25rem;
+
+  &--color {
+    &-inactive {
+      background-color: colors.$inactive-bg;
+      color: colors.$inactive-fg;
+      border-color: colors.$badge-inactive-border;
+    }
+
+    &-active {
+      background-color: colors.$active-bg;
+      color: colors.$active-fg;
+      border-color: colors.$badge-active-border;
+    }
+  }
+}

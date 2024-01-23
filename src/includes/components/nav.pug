@@ -2,7 +2,8 @@ nav.navigation
   ul.navigation__list
     each link, index in links
       li
-        a.navigation__link(href="/" + link.path)
+        //- In the real application active link must be based on path
+        a(class=`navigation__link ${index == 2 ? "navigation__link--active" : ""}`, href="/" + link.path)
           svg.navigation__icon(width=24, height=24)
             use(href=link.icon)
           | #{link.name}

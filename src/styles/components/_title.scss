@@ -2,13 +2,13 @@
 
 .title {
   color: colors.$black;
+  line-height: 1.5;
 
   &--size {
     &-large {
       font-size: 1.625rem;
       font-weight: 600;
       letter-spacing: 0.26px;
-      line-height: 1.5;
     }
 
     &-medium {
@@ -16,11 +16,16 @@
       font-weight: 500;
     }
 
+    &-semi-medium {
+      font-size: 1.375rem;
+      font-weight: 600;
+      letter-spacing: -0.22px;
+    }
+
     &-small {
       font-size: 0.875rem;
       font-weight: 500;
       letter-spacing: 0.14px;
-      line-height: 1.5;
     }
   }
 }

@@ -1,16 +1,19 @@
-p Showing data 1 to 8 of  256K entries
-div
-  button &lt;
-  ul
-    li
-      button 1
-    li
-      button 2
-    li
-      button 3
-    li
-      button 4
-    li ...
-    li
-      button 40
-  button &gt;
+div.pagination
+  p.pagination__text Showing data 1 to 8 of  256K entries
+  ul.pagination__list
+    li.pagination__text
+      button.pagination__button &lt;
+    li.pagination__text
+      button.pagination__button.pagination__button--active 1
+    li.pagination__text
+      button.pagination__button 2
+    li.pagination__text
+      button.pagination__button 3
+    li.pagination__text
+      button.pagination__button 4
+    li.pagination__text.pagination__dots
+      |...
+    li.pagination__text
+      button.pagination__button 40
+    li.pagination__text
+      button.pagination__button &gt;

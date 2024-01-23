@@ -1,0 +1,46 @@
+@use "../variables/colors";
+
+.data-table {
+  min-width: 50rem;
+  width: 100%;
+  font-size: 0.875rem;
+  letter-spacing: -0.14px;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  & td {
+    padding: 0;
+    font-weight: 500;
+  }
+
+  & th {
+    padding: 0.875rem 0;
+    font-weight: 500;
+
+    text-align: left;
+
+    color: colors.$gray-200;
+    border-bottom: 1px solid colors.$gray-150;
+  }
+
+  & td:first-child,
+  & th:first-child {
+    padding-left: 2.375rem;
+  }
+
+  & td:last-child,
+  & th:last-child {
+    padding-right: 2.375rem;
+  }
+
+  &__container {
+    overflow-x: auto;
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    height: 4.9375rem;
+    border-bottom: 1px solid colors.$gray-150;
+  }
+}

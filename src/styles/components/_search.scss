@@ -1,0 +1,29 @@
+@use "../variables/colors";
+
+.search {
+  &__form {
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 0.4375rem;
+    left: 0.5rem;
+    color: colors.$gray-550;
+  }
+  &__input {
+    padding: 10px 40px;
+    max-width: 13.5rem;
+
+    border: 0;
+    border-radius: 0.625rem;
+
+    background-color: colors.$gray-100;
+
+    font-size: 0.75rem;
+    line-height: 1.5;
+
+    &::placeholder {
+      color: colors.$gray-200;
+    }
+  }
+}

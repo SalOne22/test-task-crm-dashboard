@@ -26,7 +26,8 @@
     transition: color 250ms ease, background-color 250ms ease;
 
     &:hover,
-    &:focus-visible {
+    &:focus-visible,
+    &--active {
       background-color: colors.$brand-blue;
       color: colors.$white;
     }

@@ -1,3 +1,4 @@
+//- Example data
 -
   const profile = {
     name: "Evano",
@@ -27,6 +28,8 @@ html(lang="en")
     title CRM Dashboard
   body
     main
-      h2.title.title--size-medium Hello #{name} 👋🏼,
-      include includes/all-customers.pug
-      include includes/components/sidebar.pug
+      .container
+        h2.title.title--size-medium Hello #{profile.name} 👋🏼,
+        //- Somewhat component approach
+        include includes/all-customers.pug
+        include includes/components/sidebar.pug

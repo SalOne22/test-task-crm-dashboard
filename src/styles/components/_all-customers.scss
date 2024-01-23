@@ -1,0 +1,32 @@
+@use "../variables/colors";
+
+.all-customers {
+  &__title {
+    margin-bottom: 0.4375rem;
+  }
+
+  &__status {
+    color: colors.$brand-green;
+    font-size: 0.875rem;
+    letter-spacing: -0.14px;
+    line-height: 1.5;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-right: 3.3125rem;
+    margin-bottom: 1.625rem;
+  }
+
+  &__search-form {
+    position: relative;
+    bottom: 0.5625rem;
+  }
+
+  &__table {
+    margin-bottom: 1.875rem;
+  }
+}

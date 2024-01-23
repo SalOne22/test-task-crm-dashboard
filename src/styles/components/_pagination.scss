@@ -1,0 +1,60 @@
+@use "../variables/colors";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: -0.14px;
+    line-height: 1.5;
+
+    color: colors.$gray-200;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+
+    & > li + li {
+      margin-left: 0.75rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.12px;
+  }
+
+  &__dots {
+    padding-top: 8px;
+    color: colors.$black;
+  }
+
+  &__button {
+    background-color: colors.$gray-50;
+    border: 1px solid colors.$gray-150;
+    border-radius: 0.25rem;
+
+    padding: 0;
+
+    color: colors.$gray-800;
+
+    // average size
+    width: 1.625rem;
+    height: 1.5rem;
+
+    &--active {
+      background-color: colors.$brand-blue;
+      color: colors.$white;
+      border-color: transparent;
+    }
+  }
+}
